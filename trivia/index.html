@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            const ANS2 = "Cristiano Ronaldo";
+            const ANS1 = "Real Madrid";
+
+            function CheckP1(){
+                var button = event.srcElement;
+                var ans = button.innerHTML;
+                var feedback = document.querySelector("#feedback1");
+
+                if (ans === ANS1){
+                    button.style.backgroundColor = "#00ff00";
+                    feedback.innerHTML = "Correct!";
+                }
+                else{
+                    button.style.backgroundColor = "#ff0000";
+                    feedback.innerHTML = "Incorrect!";
+                }
+
+            }
+
+
+
+            function CheckP2(){
+                var input = document.getElementById("answer");
+                var ans = input.value;
+                var feedback = document.getElementById("feedback2");
+                if (ans === ANS2){
+                    input.style.backgroundColor = "#00ff00"
+                    feedback.innerHTML = "Correct!";
+                }
+                else{
+                    input.style.backgroundColor = "#ff0000";
+                    feedback.innerHTML = "Incorrect!";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section" id="p1">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What is the football club with the most Champions League titles?</h3>
+                <button class = "button" onclick = "CheckP1()" >FC Barcelona</button>
+                <button class = "button" onclick = "CheckP1()">Real Madrid</button>
+                <button class = "button" onclick = "CheckP1()">AC Milan</button>
+                <button class = "button" onclick = "CheckP1()">Liverpool FC</button>
+                <p Id = "feedback1"></p>
+                </div>
+
+            <div class="section" id="p1">
+                <h2>Part 2: Free Response</h2>
+                <h3>Who is Champions League's all time top scorer?</h3>
+                <hr>
+                <input type = "Text" placeholder = "Type your answer" Id = "answer"></input> <button class = "Button" onclick = "CheckP2()">Submit</button>
+                <p Id = "feedback2"></p>
+            </div>
+        </div>
+    </body>
+</html>

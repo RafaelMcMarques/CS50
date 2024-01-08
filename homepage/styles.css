@@ -1,0 +1,189 @@
+
+body {
+    background: rgb(0,0,0);
+    background: linear-gradient(150deg, rgba(0,0,0,1) 31%, rgba(0,2,27,1) 100%);
+    font-family: "Lucida Console", "Courier New", monospace; 
+    color: grey;
+    min-height: 100vh;
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#modo {
+    background-color: transparent;
+    outline: thick double #32a1ce;
+    border-radius: 30%;
+    position: absolute;
+    right: 0px;
+    margin-top: 10px;   
+    border: none;
+    color: grey;
+}
+
+#conteudo-home {
+    height: 75vh;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#imagem-perfil {
+    outline: thick double #32a1ce;
+    border-radius: 50%;
+    max-height: 50vh;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 1vh;
+}
+
+#nome { 
+    color: #32a1ce;
+    font-size: 4vw;
+}
+
+.texto {
+    font-size: clamp(1em, 1.3em, 1.4em);
+    font-weight: bolder;
+    display: inline;
+}
+
+
+a {
+    text-decoration: none;
+    color: #32a1ce;
+}
+
+.nav-link {
+    color: grey;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icone {
+    height: 6vh;
+    width: auto;
+    margin-right: 3vw;
+}
+
+.pagina {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.intro-academic {
+    text-align: center;
+    margin-top: 5vh;
+}
+
+.conteudo{
+    display: flex;
+    align-items: left;
+    width: 60vw;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10vh;
+}
+
+.projeto {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+    max-width: 75vw;
+    margin-bottom: 1vh;
+}
+
+.icone-projeto {
+    width: auto;
+    margin-right: 3vw;
+}
+
+.texto-projeto{
+    font-size: larger;
+    font-weight: bolder;
+}
+
+#bst {
+    width: 13vh;
+    height: auto;
+}
+
+#burger {
+    width: 15vh;
+    height: auto;
+}
+
+#cpu {
+    width: 15vh;
+    height: auto;
+}  
+
+.divisor-projetos {
+    width: 75vw;
+    color: #32a1ce;
+}
+
+.nome-projeto {
+    color: #32a1ce;
+}
+
+
+.aviso-pro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#exc {
+    font-size: 50vh;
+}
+
+.texto-aviso {
+    font-size: 5vh;
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    #div-conteudo {
+        text-align: center;
+    }
+
+    .texto-projeto {
+        text-align: center;
+    }
+
+    .projeto {
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (max-height: 300px) {
+
+    #conteudo-home {
+        overflow-y:scroll ;
+    }
+
+}
+

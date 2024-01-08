@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <h1> Quote for stock prices <h1>
+        <hr>
+    <form action="/quote" method="POST">
+        <input type="text" name="symbol" autofocus autocomplete="off" class="form-control mx-auto w-auto" placeholder="Symbol e.g: NFLX">
+        <button class="btn btn-primary" type="submit">Quote</button>
+    </form>
+
+    {% if request.method == "POST" %}
+
+        {% if not stock %}
+            <h1> Not Found </h1>
+        {% else %}
+
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Symbol</td>
+                            <td>Price</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> {{ stock.symbol }}</td>
+                            <td> {{ stock.price }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+        {% endif %}
+
+    {% endif %}
+{% endblock %}

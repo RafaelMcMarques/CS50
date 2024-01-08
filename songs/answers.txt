@@ -1,0 +1,11 @@
+I would characterize the listener's audio aura as purple
+I calculated this based on average values of danceability, valence and energy as well
+as my personal knoladge regarding the songs and artists in the database.
+Purple aura might not be representative of the listener since the valence
+average is lower then you wold expect from someone who likes to be amped up
+by music. Calculating the aura based on the discription given is hard, since
+such discription is rather emotional and translating it into mathematical therms
+is a subjective task. Therefore, in order to write code that calculates
+the audio aura of a listener, a more precise definition of the
+diferent types of auras should be stablished and only then a formula
+for characterising a listener could be written.

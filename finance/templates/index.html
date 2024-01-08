@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    home
+{% endblock %}
+
+{% block main %}
+        <table>
+            <thead>
+                <tr>
+                    <td>Symbol</td>
+                    <td>Price</td>
+                    <td>Shares</td>
+                    <td>Total</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for stock in stocks %}
+                    {% if stock.shares != 0 %}
+                        <tr>
+                            <td> {{ stock.symbol }}</td>
+                            <td> {{ stock.price }}</td>
+                            <td> {{ stock.shares }}</td>
+                            <td> {{ stock.total }}</td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+        <hr>
+        <h4 style="text-align:left;"> Stocks: {{ value }} </h4>
+        <h4 style="text-align:left;"> Cash: {{ cash }}  </h4>
+        <h4 style="text-align:left;"> Total: {{ total }} </h4>
+        <form action="/add" method="POST">
+            <input type="text" name="amount">
+            <button type="submit">ADD CASH</button>
+        </form>
+
+{% endblock %}
